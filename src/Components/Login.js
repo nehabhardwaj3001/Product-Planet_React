@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import Home from './Home.js';
 import "./style/Login.css";
 import logo from '../image/logo.jpeg';
@@ -17,7 +17,9 @@ const Login = () => {
         navigate('/Home');
         }
 
-
+        useEffect(() => {
+            localStorage.setItem("details", JSON.stringify(details));
+          }, [details]);
 
   return (
     <div className='form-container'>

@@ -36,7 +36,7 @@
   }
   
   .button{
-    background-color: red;
+    background-color:#7fc5ab;
     border: none;
     color: white;
     padding: 10px 32px;
@@ -46,7 +46,7 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius:20px;
+    border-radius:10px;
   }
 
   .box{

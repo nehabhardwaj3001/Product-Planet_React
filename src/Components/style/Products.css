@@ -71,11 +71,12 @@
 
   .previousButton{
     width:80%;
-    height: 10px;
+    height: 8px;
     list-style: none;
     display: flex;
     justify-content:space-around;
     padding: 20px;
+    
     margin: 8px;
 
     border-radius: 5px;
@@ -85,7 +86,7 @@
   }
   .nextButton{
     width:80%;
-    height: 10px;
+    height: 8px;
     list-style: none;
     display: flex;
     justify-content:space-around;
@@ -97,3 +98,34 @@
     color: #2b2eff;
     cursor: pointer;
   }
+
+  .addToCart-button{
+    font-size: 1rm;
+    padding: 0.5rm;
+    margin: 0.1rm;
+    border-radius: 1rm;
+    border: 0.1rm #404040 solid;
+    background-color: #ecc454;
+    width: 50%;
+    cursor: pointer;
+      height: 35px;
+  }
+
+  .addToCart-button.add{
+    background-color: #40c0f0;
+    width: 1.5rm;
+  }
+
+  .addToCart-button.remove{
+    background-color: #f04040;
+    width: 1.5rm;
+  }
+  .addToCart-button.badge{
+    background-color: #f04040;
+    border: none;
+    color: #ffffffff;
+    width: 1.5rm;
+  }
+
+  
+  
