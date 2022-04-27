@@ -3,21 +3,18 @@ import { Link } from 'react-router-dom';
 import './style/Products.css';
 import ReactPaginate from 'react-paginate';
 import { Grid } from '@material-ui/core';
+import MyCart from './MyCart';
 // import '../node_modules/bootstrap/dis/css/bootstrap.min.css'
 
-function Products({photos, search, setSearch,upperlimit ,setUpperlimit, lowerlimit, setLowerlimit , getPhotos}) 
-{
+function Products({photos, search, setSearch,upperlimit ,setUpperlimit, lowerlimit,cartItems, setLowerlimit , getPhotos , setCartItems}){
   const [pageNumber, setPageNumber] = useState(0);
-  const [postsPerPage, setPostsPerPage] = useState(5);
-  const [cartItems, setCartItems]= useState([]);
-
-  
+  const [postsPerPage, setPostsPerPage] = useState(5);  
   const pageVisited = pageNumber*postsPerPage;
 const pageCount= Math.ceil(photos.length / postsPerPage);
 const changePage = ({selected}) =>{
    setPageNumber(selected)
 }
-
+console.log("setitems" , cartItems)
   return (
     <div>
           <div>
@@ -30,7 +27,8 @@ const changePage = ({selected}) =>{
       </div>
         < Grid container spacing={3}>
         {
-        photos.filter((item) => {
+        photos
+        .filter((item) => {
             if(item.title.toLowerCase().includes(search.toLowerCase()) 
             ) {
                 return item
@@ -45,24 +43,11 @@ const changePage = ({selected}) =>{
                         <img  className='image' src={item.image} width="200px" height="200px"  />
                         </Link>
                       <p>{item.title}</p>
-                     {/* <button className='addToCart-button' onClick={setCartItems()}>Add to Cart</button> */}
-                     <button onClick={() => {
-                       setCartItems(() => {
-                          if(!cartItems.includes(item.id)) {
-                            return [...cartItems, item.id]
-                          }else{
-                           return [...cartItems]
-                          }
-                        })
-            }}
-            >Add to Cart</button>
                     </Grid>
                     
-                   )
+                   );
             }
-        )
-        // <ReactPaginate />
-        
+        )        
         }
         </Grid>
         <div>
@@ -78,10 +63,10 @@ const changePage = ({selected}) =>{
                     activeClassName={"paginationActive"}
                   />
        </div>
-          {/* <div>{displayPosts}</div> */}
-          {  console.log("cart", cartItems)}
-              </div>
-  )
+              </div>)
+
+            
+  
 }
 
 export default Products

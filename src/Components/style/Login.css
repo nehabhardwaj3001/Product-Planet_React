@@ -36,6 +36,7 @@
     width: 90%;
     margin: 5px 5px;
     padding: 10px 10px;
+    margin-bottom: 0.5px;
     background-color: #f8f8f8;
    }
 /*   
@@ -58,4 +59,10 @@
     justify-content: center;
     size: 50px;
     margin-bottom: 0;
+  }
+
+  p {
+    color: red;
+   font-size:smaller;
+   padding-top: 0.5px;
   }

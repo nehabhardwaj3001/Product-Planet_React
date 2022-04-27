@@ -1,0 +1,14 @@
+.main-cart-section{
+    justify-content: center;
+    text-align: center;
+    font-size: xx-large;
+    margin:25px;
+    color: darkblue;
+}
+
+.cart-items{
+    margin: 30px;
+}
+.cart-image{
+    margin-left: 10px;
+}
